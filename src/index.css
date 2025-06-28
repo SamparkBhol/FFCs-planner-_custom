@@ -1,0 +1,87 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 210 100% 50%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 210 100% 50%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+body {
+  @apply bg-[#0D1117] text-gray-200;
+  background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.05) 1px, transparent 0);
+  background-size: 20px 20px;
+}
+
+.glow-text {
+  text-shadow: 0 0 5px hsl(var(--primary) / 0.5), 0 0 10px hsl(var(--primary) / 0.5);
+}
+
+.timetable-header-th {
+  @apply p-1 border border-gray-700 text-xs font-bold text-center align-middle bg-gray-900 text-gray-300;
+}
+
+.timetable-day-td {
+  @apply p-2 border border-gray-700 font-bold bg-gray-800 text-gray-200 text-center align-middle;
+}
+
+.timetable-slot-td {
+  @apply p-1 border border-gray-700 bg-gray-900/50 text-center text-xs h-[60px] transition-all duration-300;
+}
+
+.timetable-lunch-td {
+  @apply p-1 border border-gray-700 bg-gray-800 font-bold text-gray-500 text-center align-middle;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+.slot-active {
+  @apply font-bold text-cyan-400;
+  text-shadow: 0 0 4px rgba(0, 255, 255, 0.5);
+}
+
+.slot-inactive {
+  @apply text-gray-600;
+}
+
+.visitor-counter {
+  @apply fixed bottom-4 left-4 bg-gray-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-lg px-4 py-2 shadow-lg text-sm font-medium text-gray-300 shadow-cyan-500/10;
+}
+
+.glassmorphism {
+    background: rgba(13, 17, 23, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
