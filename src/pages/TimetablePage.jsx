@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Helmet } from 'react-helmet';
 import { motion } from 'framer-motion';
 import Timetable from '@/components/TimetableGrid';
@@ -11,6 +11,7 @@ import { RotateCcw } from 'lucide-react';
 const TimetablePage = () => {
   const [courses, setCourses] = useState([]);
   const { toast } = useToast();
+  const timetableRef = useRef(null);
 
   useEffect(() => {
     const savedCourses = localStorage.getItem('ffcs-courses');
@@ -44,7 +45,7 @@ const TimetablePage = () => {
   return (
     <>
       <Helmet>
-        <title>Timetable Builder - FFCS Planner AI</title>
+        <title>Timetable Builder - FFCS Planner</title>
         <meta name="description" content="Build your VIT University timetable using an AI-powered chatbot. Handle complex slot combinations with ease." />
       </Helmet>
       
@@ -64,10 +65,10 @@ const TimetablePage = () => {
           </Button>
         </motion.div>
 
-        <Timetable slots={allSlots} />
+        <Timetable ref={timetableRef} slots={allSlots} />
       </div>
 
-      <Chatbot courses={courses} setCourses={setCourses} />
+      <Chatbot courses={courses} setCourses={setCourses} timetableRef={timetableRef} />
     </>
   );
 };

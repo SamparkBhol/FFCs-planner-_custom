@@ -2,13 +2,14 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Book, Calendar, Home, Bot } from 'lucide-react';
+import { Book, Calendar, Home, Bot, BarChart2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const navItems = [
   { path: '/', label: 'Home', icon: Home },
   { path: '/timetable', label: 'Timetable', icon: Calendar },
   { path: '/tasks', label: 'Task Manager', icon: Book },
+  { path: '/analytics', label: 'Analytics', icon: BarChart2 },
 ];
 
 const Header = () => {
@@ -24,7 +25,7 @@ const Header = () => {
           <motion.div whileHover={{ rotate: 360 }}>
             <Bot className="w-8 h-8 text-cyan-400" />
           </motion.div>
-          <span className="text-xl font-bold glow-text">FFCS Planner AI</span>
+          <span className="text-xl font-bold glow-text">FFCS Planner</span>
         </NavLink>
         <nav className="hidden md:flex items-center gap-2">
           {navItems.map((item) => (

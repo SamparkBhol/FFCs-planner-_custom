@@ -94,7 +94,7 @@ export const FFCS_SLOTS = {
   'L49': [{ day: 'THU', time: '2:00-2:50', type: 'lab' }],
   'L50': [{ day: 'THU', time: '2:51-3:40', type: 'lab' }],
   'L51': [{ day: 'THU', time: '3:51-4:40', type: 'lab' }],
-  'L52': [{ day: 'THU', time: '4:41-5:30', type: 'lab' }],
+  'L52': [{ day: 'THU', 'time': '4:41-5:30', type: 'lab' }],
   'L53': [{ day: 'THU', time: '5:40-6:30', type: 'lab' }],
   'L54': [{ day: 'THU', time: '6:31-7:20', type: 'lab' }],
   'L55': [{ day: 'FRI', time: '2:00-2:50', type: 'lab' }],
@@ -106,13 +106,13 @@ export const FFCS_SLOTS = {
 };
 
 export const THEORY_TIME_SLOTS = [
-  '8:00 AM to 8:50 AM', '9:00 AM to 9:50 AM', '10:00 AM to 10:50 AM', '11:00 AM to 11:50 AM', '12:00 PM to 12:50 PM',
+  '8:00 AM to 8:50 AM', '9:00 AM to 9:50 AM', '10:00 AM to 10:50 AM', '11:00 AM to 11:50 AM', '12:00 PM to 12:50 PM', '',
   '2:00 PM to 2:50 PM', '3:00 PM to 3:50 PM', '4:00 PM to 4:50 PM', '5:00 PM to 5:50 PM', '6:00 PM to 6:50 PM', '6:51 PM to 7:00 PM', '7:01 PM to 7:50 PM'
 ];
 
 export const LAB_TIME_SLOTS = [
   '08:00 AM to 08:50 AM', '08:51 AM to 09:40 AM', '09:51 AM to 10:40 AM', '10:41 AM to 11:30 AM', '11:40 AM to 12:30 PM', '12:31 PM to 1:20 PM',
-  '2:00 PM to 2:50 PM', '2:51 PM to 3:40 PM', '3:51 PM to 4:40 PM', '4:41 PM to 5:30 PM', '5:40 PM to 6:30 PM', '6:31 PM to 7:20 PM'
+  '2:00 PM to 2:50 PM', '2:51 PM to 3:40 PM', '3:51 PM to 4:40 PM', '4:41 PM to 5:30 PM', '5:40 PM to 6:30 PM', '6:31 PM to 7:20 PM', ''
 ];
 
 export const TIMETABLE_STRUCTURE = {

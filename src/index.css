@@ -40,8 +40,12 @@
 
 body {
   @apply bg-[#0D1117] text-gray-200;
-  background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.05) 1px, transparent 0);
-  background-size: 20px 20px;
+  overflow-x: hidden;
+}
+
+#root {
+  position: relative;
+  z-index: 1;
 }
 
 .glow-text {
@@ -49,7 +53,8 @@ body {
 }
 
 .timetable-header-th {
-  @apply p-1 border border-gray-700 text-xs font-bold text-center align-middle bg-gray-900 text-gray-300;
+  @apply p-2 border border-gray-700 text-xs font-bold text-center align-middle bg-gray-900 text-gray-300;
+  white-space: pre-wrap;
 }
 
 .timetable-day-td {
@@ -57,7 +62,11 @@ body {
 }
 
 .timetable-slot-td {
-  @apply p-1 border border-gray-700 bg-gray-900/50 text-center text-xs h-[60px] transition-all duration-300;
+  @apply relative p-1 border border-gray-700 bg-gray-900/50 text-center text-xs h-[65px] transition-all duration-300;
+}
+
+.timetable-slot-td:hover {
+  @apply scale-105 z-10 shadow-lg shadow-cyan-500/10 bg-gray-800/70;
 }
 
 .timetable-lunch-td {
@@ -76,12 +85,12 @@ body {
 }
 
 .visitor-counter {
-  @apply fixed bottom-4 left-4 bg-gray-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-lg px-4 py-2 shadow-lg text-sm font-medium text-gray-300 shadow-cyan-500/10;
+  @apply fixed bottom-4 left-4 bg-gray-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-lg px-4 py-2 shadow-lg text-sm font-medium text-gray-300 shadow-cyan-500/10 z-20;
 }
 
 .glassmorphism {
-    background: rgba(13, 17, 23, 0.5);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    background: rgba(13, 17, 23, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
